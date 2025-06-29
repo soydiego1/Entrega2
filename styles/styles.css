@@ -185,7 +185,7 @@ section{
   margin-bottom: 40px;
   list-style:none;
 }
-/* aca modificamos los videos */
+/* aca modificamos los videos 
 .videos{
   display: grid;
   grid-template-columns:repeat(1,1fr) ;
@@ -194,6 +194,7 @@ section{
   align-content: center;
   margin-bottom: 40px;
 }
+*/
 /* aca modificamos las imagenes */
 .imagenEnlaces{
   width: 200px;
@@ -495,7 +496,7 @@ header nav div div ul li :active{
   display: inline-block;
   margin-top: 0px;
 }
-/* aca modificamos los videos */
+/* aca modificamos los videos 
 .videos{
   display: grid;
   grid-template-columns:repeat(2,1fr) ;
@@ -504,6 +505,7 @@ header nav div div ul li :active{
   justify-items: center;
   align-content: space-evenly;
 }
+*/
 /* aca modificamos el titulo principal de la seccion propuesta y plan de trabajo*/
   #tituloPropuesta{
     display: flex;
@@ -636,7 +638,7 @@ footer  div div div p{
   .images6{
   grid-area:images6;
 }
-/* aca modificamos los videos */
+/* aca modificamos los videos 
 .videos{
   display: grid;
   grid-template-columns:repeat(3,1fr) ;
@@ -646,6 +648,7 @@ footer  div div div p{
   justify-items: center;
   align-content: space-evenly;
 }
+*/
 /* aca modificamos el margen del menu de navegacion*/
 .bg-fondo{
 background-color: #d7e0dd;
