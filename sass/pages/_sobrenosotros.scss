@@ -1,0 +1,44 @@
+// variables
+@use "../utilidades/variables" as *;
+@use "../utilidades/mixin" as *;
+main {
+    // Imagen destacada
+    #imagen-trabajando {
+      width: 100%;
+      height: 300px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  
+    // Título principal y subtítulos
+    .titulo-sobre-nosotros {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: $color-principal; // Asegurate de tener esta variable definida
+    }
+  
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 20px;
+  
+      .texto-nosotros,
+      .texto-experiencia {
+        p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 15px;
+          color:$color-menu; // Variable sugerida para el texto
+        }
+      }
+  
+      h2.titulo-sobre-nosotros {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $color-principal;
+      }
+    }
+  }

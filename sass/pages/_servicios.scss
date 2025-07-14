@@ -1,0 +1,72 @@
+@use "../utilidades/variables" as *;
+main {
+   // Grilla de imágenes
+    .imagenes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 40px 0;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+    // Contenido de servicios
+    .contenido-completo {
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+  
+      #servicios {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: $color-principal;
+      }
+  
+      .titulos-servicios,
+      .titulos-tramites {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 30px;
+        color: $color-principal;
+      }
+  
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        color: $color-menu;
+      }
+  
+      .lista-servicio {
+        list-style: disc;
+        padding-left: 20px;
+        margin-top: 15px;
+  
+        li {
+          margin-bottom: 10px;
+          font-size: 16px;
+          line-height: 1.4;
+        }
+      }
+  
+      .tramites-generales {
+        margin-top: 20px;
+  
+        ul {
+          list-style: circle;
+          padding-left: 20px;
+  
+          li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }

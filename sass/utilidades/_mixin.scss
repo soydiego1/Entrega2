@@ -1,0 +1,26 @@
+@use "../utilidades/variables" as *;
+// mixin con parametros 
+@mixin grid ($grid,$columns,$rows,$gap){
+    display:$grid;
+    grid-template-columns:$columns;
+    grid-template-rows:$rows;
+    gap:$gap;
+}
+
+// mixin sin parametros 
+@mixin flex{
+    display: inline-block;
+    width: 300px; /* Ancho de la caja */
+    height: 150px; /* Alto de la caja */
+    background-color: $color-principal; /* Color de fondo */
+    border: 3px solid $color-borde; /* Borde con color */
+    padding: 20px; /* Espacio interno */
+    margin: 3px; /* Margen superior/inferior y centrado horizontal */
+    box-shadow: 0 4px 8px 0;
+    border-radius: 10px;
+}
+// mixin con - sin parametros 
+
+@mixin titulos-tramites ($margin-bottom){
+    text-align:center;
+}
