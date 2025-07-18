@@ -273,7 +273,6 @@ body {
   footer .suscribete {
     font-size: 18px;
     padding-right: 40px;
-    margin-top: 0;
   }
   footer .contacto {
     font-size: 18px;
@@ -283,7 +282,6 @@ body {
   footer .contacto .nombres {
     font-size: 15px;
     display: inline-block;
-    margin-top: 0;
   }
   footer .suscripcion {
     font-size: 14px;
@@ -293,7 +291,7 @@ body {
   }
 }
 .derechos-reservados {
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 header {
@@ -450,7 +448,7 @@ section .contenedor-servicios .caja4 {
 .footer .derechos-reservados {
   display: flex;
   justify-content: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Poppins, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;
 }
 
