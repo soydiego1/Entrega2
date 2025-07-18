@@ -1,9 +1,33 @@
 @use "../utilidades/variables" as *;
+@use "../utilidades/mixin"  as*;
 main {
    // Grilla de imágenes
     .imagenes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      @include grid(grid, repeat(3, 2fr), auto, 10px);
+      grid-template-areas:
+      "images5 images3 images3"
+      "images1 images2 images2";
+
+
+    .images1 { grid-area: images1; }
+    .images2 { grid-area: images2; }
+    .images3 { grid-area: images3; }
+    .images5 { grid-area: images3; }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .images1,
+    .images2,
+    .images3,
+    .images5,
+    .images6 {
+      
+      max-height: 150px;
+      
+    }
       gap: 15px;
       margin: 40px 0;
   
@@ -69,4 +93,5 @@ main {
         }
       }
     }
+    
   }

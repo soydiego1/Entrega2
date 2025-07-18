@@ -3,10 +3,23 @@
 
 @media screen and (min-width: 768px) {
   main {
+    section{
+      .seccion-contacto{
+        padding: 40px 20px;
+        informacion-contacto{
+          gap: 20px; 
+        }
+      }
     .contenedor-servicios {
-      justify-items: center;
+      display: flex;
+      .caja1,
+      .caja2,
+      .caja3,
+      .caja4 {
+        @include flex;
     }
-
+  }
+}
     .enlaces {
       @include grid(grid, repeat(3, 1fr), repeat(2, 1fr), 25px);
       justify-items: center;
@@ -28,7 +41,13 @@
     }
 
     .imagen-hombre {
-      display: block;
+      img {
+        display:block !important;
+        max-width: 100%;
+        height: auto;
+        padding-top: 20px;
+
+      }
     }
 
     #titulo-propuesta {
@@ -47,6 +66,7 @@
         display: flex;
         margin: 10px 0;
       }
+        
     }
 
     #correo-electronico {
@@ -54,9 +74,8 @@
     }
   }
   .imagenes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
+    @include grid(grid, repeat(3, 2fr), auto, 10px);
+      grid-template-areas:
       "images5 images3 images3"
       "images1 images2 images2";
 
@@ -82,7 +101,8 @@
   }
   footer {
     .contenedor {
-      @include grid(grid, 1fr 1.2fr 1fr,auto, 20px);
+      @include grid(grid, 1fr 1fr 1fr,1fr,10px);
+      
     }
 
     .suscribete {

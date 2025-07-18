@@ -35,10 +35,24 @@ body {
   #navbar-nav-dropdown {
     background-color: #d7e0dd;
   }
-  main .contenedor-servicios {
+  main section .contenedor-servicios {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+  main section .contenedor-servicios .caja1,
+  main section .contenedor-servicios .caja2,
+  main section .contenedor-servicios .caja3,
+  main section .contenedor-servicios .caja4 {
+    width: 25%;
+    display: inline-block;
+    width: 300px; /* Ancho de la caja */
+    height: 150px; /* Alto de la caja */
+    background-color: #29bd99; /* Color de fondo */
+    border: 3px solid #333333; /* Borde con color */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 8px 0;
+    border-radius: 10px;
   }
   main .enlaces {
     display: grid;
@@ -66,6 +80,10 @@ body {
     height: 500px;
   }
   main .imagen-hombre {
+    height: 500px;
+    padding-top: 60px;
+  }
+  main .imagen-hombre img {
     display: block;
     height: 500px;
     padding-top: 60px;
@@ -122,32 +140,24 @@ body {
     margin-top: 20px;
   }
   main .imagenes-grid .seccion-contacto {
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 0.1fr;
-    gap: 0px;
-    justify-content: space-around;
+    padding: 40px 20px;
   }
   main .imagenes-grid .carousel {
     height: 300px;
   }
   main .footer .logo {
-    display: block;
     height: 90px;
   }
   main .footer .contenedor {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    margin-top: 10px;
-    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
   }
   main .footer .contenedor .contacto,
   main .footer .contenedor .suscribete,
   main .footer .contenedor .imagenes-pie-pagina {
     display: block;
-    margin: 0;
   }
   main .footer .contenedor .nombres {
     margin-top: 20px;
@@ -157,12 +167,31 @@ body {
     font-size: 15px;
   }
   main .footer .contenedor .derechos-reservados {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 768px) {
-  main .contenedor-servicios {
-    justify-items: center;
+  main section .seccion-contacto {
+    padding: 40px 20px;
+  }
+  main section .seccion-contacto informacion-contacto {
+    gap: 20px;
+  }
+  main section .contenedor-servicios {
+    display: flex;
+  }
+  main section .contenedor-servicios .caja1,
+  main section .contenedor-servicios .caja2,
+  main section .contenedor-servicios .caja3,
+  main section .contenedor-servicios .caja4 {
+    display: inline-block;
+    width: 300px; /* Ancho de la caja */
+    height: 150px; /* Alto de la caja */
+    background-color: #29bd99; /* Color de fondo */
+    border: 3px solid #333333; /* Borde con color */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 8px 0;
+    border-radius: 10px;
   }
   main .enlaces {
     display: grid;
@@ -183,8 +212,11 @@ body {
     height: 400px;
     margin-top: 0;
   }
-  main .imagen-hombre {
-    display: block;
+  main .imagen-hombre img {
+    display: block !important;
+    max-width: 100%;
+    height: auto;
+    padding-top: 20px;
   }
   main #titulo-propuesta {
     display: flex;
@@ -204,7 +236,9 @@ body {
   }
   .imagenes-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: auto;
+    gap: 10px;
     grid-template-areas: "images5 images3 images3" "images1 images2 images2";
   }
   .imagenes-grid .images1 {
@@ -232,9 +266,9 @@ body {
   }
   footer .contenedor {
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
   }
   footer .suscribete {
     font-size: 18px;
@@ -301,23 +335,23 @@ section #primer-titulo {
   justify-content: center;
 }
 section .contenedor-servicios {
-  margin: 40px 0;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 section .contenedor-servicios .caja1,
 section .contenedor-servicios .caja2,
 section .contenedor-servicios .caja3,
 section .contenedor-servicios .caja4 {
+  width: 100%;
   display: inline-block;
   width: 300px; /* Ancho de la caja */
   height: 150px; /* Alto de la caja */
   background-color: #29bd99; /* Color de fondo */
   border: 3px solid #333333; /* Borde con color */
   padding: 20px; /* Espacio interno */
-  margin: 3px; /* Margen superior/inferior y centrado horizontal */
   box-shadow: 0 4px 8px 0;
   border-radius: 10px;
 }
@@ -349,11 +383,8 @@ section .contenedor-servicios .caja4 {
 .footer .contenedor {
   margin-top: 10px;
   padding-left: 10px;
-  color: var(--bs-secondary-color);
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 150px;
-  gap: 0px;
+  gap: 10px;
 }
 .footer .contenedor .contacto {
   font-size: 18px;
@@ -374,7 +405,6 @@ section .contenedor-servicios .caja4 {
 .footer .contenedor .suscribete {
   font-size: 18px;
   display: inline-block;
-  margin-top: 130px;
 }
 .footer .contenedor .suscribete .suscripcion {
   font-size: 14px;
@@ -405,7 +435,8 @@ section .contenedor-servicios .caja4 {
 .footer .contenedor .imagenes-pie-pagina {
   align-items: center;
   justify-content: center;
-  margin: 10px 50px 0 0;
+  margin: 100px 100px;
+  margin-top: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100% 30%;
@@ -430,16 +461,16 @@ main #imagen-escribiendo {
   margin-bottom: 40px;
   border-radius: 8px;
 }
-main .seccion-contacto {
+main section .seccion-contacto {
   padding: 40px 20px;
 }
-main .seccion-contacto .informacion-contacto {
+main section .seccion-contacto .informacion-contacto {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
-main .seccion-contacto .informacion-contacto #contactenos {
+main section .seccion-contacto .informacion-contacto #contactenos {
   width: 100%;
   text-align: center;
   font-size: 36px;
@@ -447,43 +478,43 @@ main .seccion-contacto .informacion-contacto #contactenos {
   margin-bottom: 30px;
   color: #29bd99;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 h2 {
+main section .seccion-contacto .informacion-contacto .col-sm-6 h2 {
   font-size: 22px;
   margin-bottom: 10px;
   color: black;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 p {
+main section .seccion-contacto .informacion-contacto .col-sm-6 p {
   font-size: 16px;
   margin-bottom: 5px;
-  color: black;
+  color: #e1ebe7;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario {
   margin-top: 20px;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form label {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form label {
   font-weight: bold;
   font-size: 14px;
-  color: black;
+  color: #e1ebe7;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=text],
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=email],
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=text],
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=email],
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
   resize: vertical;
   min-height: 100px;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton {
   display: inline-block;
   width: fit-content;
   background-color: #007bff;
@@ -496,17 +527,22 @@ main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-main .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton:hover {
+main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton:hover {
   background-color: #007bff;
 }
-main .seccion-contacto .informacion-contacto .imagen-hombre {
+main section .seccion-contacto .informacion-contacto .imagen-hombre {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .seccion-contacto .informacion-contacto .imagen-hombre img {
-  max-width: 100%;
-  height: auto;
+main section .seccion-contacto .informacion-contacto .imagen-hombre img {
+  display: none !important;
+}
+main .footer .contenedor .nombres .suscribete .imagenes-pie-pagina {
+  margin-bottom: 0px;
+}
+main .footer .derechos-reservados {
+  margin-top: 10px;
 }
 
 main #titulo-info {
@@ -586,9 +622,35 @@ main section .plan-de-trabajo p {
 
 main .imagenes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  grid-template-areas: "images5 images3 images3" "images1 images2 images2";
   gap: 15px;
   margin: 40px 0;
+}
+main .imagenes-grid .images1 {
+  grid-area: images1;
+}
+main .imagenes-grid .images2 {
+  grid-area: images2;
+}
+main .imagenes-grid .images3 {
+  grid-area: images3;
+}
+main .imagenes-grid .images5 {
+  grid-area: images3;
+}
+main .imagenes-grid img {
+  width: 100%;
+  height: auto;
+}
+main .imagenes-grid .images1,
+main .imagenes-grid .images2,
+main .imagenes-grid .images3,
+main .imagenes-grid .images5,
+main .imagenes-grid .images6 {
+  max-height: 150px;
 }
 main .imagenes-grid img {
   width: 100%;

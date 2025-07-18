@@ -58,16 +58,16 @@ main {
     }
 
     .contenedor-servicios {
-      margin: 40px 0;
+      margin-top: 40px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
-
+      gap: 20px;
       .caja1,
       .caja2,
       .caja3,
       .caja4 {
+        width: 100%; // Ocupan todo el ancho en mobile
         @include flex;
       }
     }
@@ -100,8 +100,8 @@ main {
   .contenedor {
     margin-top: 10px;
     padding-left: 10px;
-    color: var(--bs-secondary-color);
-    @include grid(grid, 1fr, 150px, 0px);
+    display: grid;
+    gap: 10px;
 
     .contacto {
       font-size: 18px;
@@ -126,7 +126,7 @@ main {
     .suscribete {
       font-size: 18px;
       display: inline-block;
-      margin-top: 130px;
+      
 
       .suscripcion {
         font-size: 14px;
@@ -162,7 +162,8 @@ main {
     .imagenes-pie-pagina {
       align-items: center;
       justify-content: center;
-      margin: 10px 50px 0 0;
+      margin: 100px 100px;
+      margin-top:0px;
       @include grid(grid, 1fr 1fr, 100% 30%, 0px);
 
       .imagen-instagram,

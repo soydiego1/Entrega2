@@ -1,5 +1,6 @@
 @use "../utilidades/variables" as *;
 @use "../utilidades/mixin"  as*;
+@use "../base/reset" as*;
 
 @media screen and (min-width: 1024px) {
   header,
@@ -8,11 +9,21 @@
   }
 
   main {
+    section{
     .contenedor-servicios {
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
+      .caja1,
+      .caja2,
+      .caja3,
+      .caja4 {
+        width: 25%;
+        @include flex;
+        
+      }
     }
+  }
     .enlaces {
       @include grid(grid, repeat(3, 1fr), repeat(2, 1fr), 25px);
       justify-items: center;
@@ -42,9 +53,16 @@
     }
 
     .imagen-hombre {
-      display: block;
-      height: 500px;
-      padding-top: 60px;
+        height: 500px;
+        padding-top: 60px;
+
+      img {
+        display: block;
+        height: 500px;
+        padding-top: 60px;
+        
+      }
+      
     }
 
     .imagenes-grid {
@@ -94,9 +112,9 @@
       margin-top: 20px;
     }
 
-    .seccion-contacto {
-      @include grid(grid, 2fr , .1fr ,0px);
-      justify-content: space-around;
+   .seccion-contacto {
+      padding: 40px 20px;
+    
     }
 
     .carousel {
@@ -106,19 +124,16 @@
 
   .footer {
     .logo {
-      display: block;
       height: 90px;
     }
     .contenedor {
-    @include grid(grid, 1fr 2fr 1fr, auto, 20px);
-    margin-top: 10px;
-    padding: 20px;
-
+      @include grid(grid, 1fr 1fr 1fr,1fr,10px);
+  
     .contacto,
     .suscribete,
     .imagenes-pie-pagina {
       display: block; 
-      margin: 0; 
+
     }
 
     .nombres {
@@ -130,7 +145,7 @@
       font-size: 15px;
     }
     .derechos-reservados {
-      margin-top: 50px;
+      margin-top: 10px;
     }
   }
 }
