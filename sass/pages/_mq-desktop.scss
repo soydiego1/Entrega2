@@ -1,16 +1,16 @@
 @use "../utilidades/variables" as *;
 @use "../utilidades/mixin"  as*;
 @use "../base/reset" as*;
-
+/* aca aplicamos la mediaquery para desktop */
 @media screen and (min-width: 1024px) {
   header,
   #navbar-nav-dropdown {
     background-color: $color-superior;
   }
-
   main {
     section{
     .contenedor-servicios {
+/* aca aplicamos a las cajas del contenedor servicios del index */
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -25,6 +25,7 @@
     }
   }
     .enlaces {
+/* aca aplicamos al div del index */
       @include grid(grid, repeat(3, 1fr), repeat(2, 1fr), 25px);
       justify-items: center;
       margin: 40px;
@@ -32,40 +33,40 @@
     }
 
     #imagen-trabajando {
+/* imagen destacada de la seccion sobre nosotros */
       width: 100%;
       height: 400px;
     }
 
     #imagen-analizando {
+/* aca modificamos la imagen principal de la seccion propuesta y plan de trabajo */
       width: 100%;
       height: 400px;
       margin-top: 0;
     }
 
     #imagen-escribiendo {
+/* aca modificamos la imagen superior de la seccion contacto*/
       width: 100%;
-      height: 300px;
+      height: 400px;
     }
 
     #imagen-edificio {
       width: 100%;
-      height: 500px;
+      height: 400px;
     }
 
     .imagen-hombre {
+        img {
+/* Imagen lateral (hombre dando la mano) de la seccion contacto*/
         height: 500px;
         padding-top: 60px;
-
-      img {
-        display: block;
-        height: 500px;
-        padding-top: 60px;
-        
       }
       
     }
 
     .imagenes-grid {
+/* aca modificamos la grilla de imagenes de la seccion servicios */
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas:
@@ -92,6 +93,7 @@
         
       }
     .propuesta {
+/* aca modificamos la clase de la seccion propuesta y plan de trabajo */
       display: grid;
       grid-template-rows: repeat(5, 35px);
     }
@@ -124,30 +126,39 @@
 
   .footer {
     .logo {
+/* aca modificamos el logo de la empresa */
       height: 90px;
     }
     .contenedor {
-      @include grid(grid, 1fr 1fr 1fr,1fr,10px);
-  
-    .contacto,
-    .suscribete,
-    .imagenes-pie-pagina {
-      display: block; 
-
-    }
-
-    .nombres {
-      margin-top: 20px;
-      font-size: 15px;
-    }
-
-    .suscripcion {
-      font-size: 15px;
-    }
+/* aca modificamos el contenedor principal del footer */
+      @include grid(grid, 1fr 2fr 1fr,1fr,10px);
+      .contacto {
+        font-size: 18px;
+        display: inline-block;
+        .nombres {
+          font-size: 15px;
+          margin-top: 20px;
+          display: inline-block;
+          .suscribete {
+/* aca modificamos el div suscribete del footer*/
+            font-size: 18px;     
+            .suscripcion {
+/* aca modificamos el parrafo del div suscribete del footer */
+              font-size: 14px;
+  }
+  }    
+  .imagenes-pie-pagina {
+/* aca modificamos las imagenes de las redes sociales del footer */
+    display: block;        
+}     
+} 
+}
+}
+}
+}
+}
+/* FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre)*/
     .derechos-reservados {
       margin-top: 10px;
     }
-  }
-}
-}
-}
+ 

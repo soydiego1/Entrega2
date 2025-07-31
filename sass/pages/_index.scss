@@ -1,9 +1,8 @@
-// variables
 @use "../utilidades/variables" as *;
 @use "../utilidades/mixin" as *;
 @use "../pages/mq-desktop" as *;
 @use "../pages/mq-tablet" as *;
-
+/* aca aplicacmos al header de toda la pagina*/
 header {
   background-color: $color-superior;
   display: flex;
@@ -13,6 +12,7 @@ header {
   width: 100%;
 
   .logo {
+/* aca modificamos el logo de la empresa */
     height: 90px;
     display: block;
   }
@@ -53,11 +53,13 @@ main {
     margin-top: 3%;
 
     #primer-titulo {
+/* aca aplicamos al titulo servicios del index */
       display: flex;
       justify-content: center;
     }
 
     .contenedor-servicios {
+/* aca aplicamos a las cajas del contenedor servicios del index */
       margin-top: 40px;
       display: flex;
       justify-content: center;
@@ -67,7 +69,7 @@ main {
       .caja2,
       .caja3,
       .caja4 {
-        width: 100%; // Ocupan todo el ancho en mobile
+        width: 100%; /* ocupa todo el ancho en mobile*/
         @include flex;
       }
     }
@@ -78,62 +80,64 @@ main {
   }
 
   .enlaces {
+/* aca aplicamos al div del index */
     display: grid;
     justify-items: center;
     margin: 40px;
     @include grid(grid, repeat(1, 1fr), repeat(6, 1fr), 25px);
 
     .imagen-enlaces {
+/* aca modificamos las imagenes de los enlaces */
       width: 200px;
     }
   }
 
-
+/* aca modificamos el footer */
 .footer {
   background-color: $color-superior;
 
   .logo {
+/* aca modificamos el logo de la empresa */
     display: block;
     height: 90px;
   }
-
   .contenedor {
+/* aca modificamos el contenedor principal del footer */
     margin-top: 10px;
     padding-left: 10px;
     display: grid;
     gap: 10px;
-
-    .contacto {
+  .contacto {
       font-size: 18px;
       display: block;
-
-      .nombres {
+  .nombres {
         font-size: 18px;
         display: inline;
         margin-top: 30px;
-
-        .imagen-whattsap {
+  .imagen-whattsap {
           width: 40px;
           height: 40px;
         }
-
-        .celular {
+   .celular {
           display: inline-block;
         }
       }
     }
 
     .suscribete {
+/* aca modificamos el div suscribete del footer*/
       font-size: 18px;
       display: inline-block;
       
 
       .suscripcion {
+/* aca modificamos el parrafo del div suscribete del footer */
         font-size: 14px;
         margin-top: 30px;
       }
 
       form.input {
+/* aca modificamos el formulario del div suscribete del footer */
         display: flex;
         margin-top: 10px;
 
@@ -142,7 +146,7 @@ main {
           width: 90%;
           height: 40px;
         }
-
+/* aca modificamos el boton del div suscribete del footer */
         .boton {
           display: flex;
           font-weight: 600;
@@ -160,6 +164,7 @@ main {
     }
 
     .imagenes-pie-pagina {
+/* aca modificamos las imagenes de las redes sociales del footer */
       align-items: center;
       justify-content: center;
       margin: 100px 100px;
@@ -175,6 +180,7 @@ main {
   }
 
   .derechos-reservados {
+/* aca modificamos el ultimo parrafo del footer */
     display: flex;
     justify-content: center;
     font-family: Poppins,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

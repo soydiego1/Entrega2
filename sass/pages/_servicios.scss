@@ -1,8 +1,8 @@
 @use "../utilidades/variables" as *;
 @use "../utilidades/mixin"  as*;
 main {
-   // Grilla de imágenes
     .imagenes-grid {
+/* aca modificamos la grilla de imagenes de la seccion servicios */
       @include grid(grid, repeat(3, 2fr), auto, 10px);
       grid-template-areas:
       "images5 images3 images3"
@@ -38,13 +38,14 @@ main {
         object-fit: cover;
       }
     }
-    // Contenido de servicios
     .contenido-completo {
+/* aca modificamos Contenido principal de la seccion servicios */
       padding: 0 20px;
       max-width: 1000px;
       margin: 0 auto;
   
       #servicios {
+/* aca modificamos el titulo nuestros servicios de la seccion servicios */
         text-align: center;
         font-size: 36px;
         margin-bottom: 40px;
@@ -53,6 +54,7 @@ main {
   
       .titulos-servicios,
       .titulos-tramites {
+/* aca modificamos ambos titulos de la seccion servicios */
         font-size: 24px;
         font-weight: bold;
         margin-top: 30px;
@@ -60,6 +62,7 @@ main {
       }
   
       p {
+/* aca modificamos el Contenido del contenedor de la seccion servicios */
         font-size: 18px;
         line-height: 1.6;
         margin-bottom: 25px;
@@ -67,25 +70,28 @@ main {
       }
   
       .lista-servicio {
+/* aca modificamos las listas desordenadas de la seccion servicios */
         list-style: disc;
         padding-left: 20px;
         margin-top: 15px;
-  
+/* aca modificamos los li de la seccion servicios */
         li {
           margin-bottom: 10px;
           font-size: 16px;
           line-height: 1.4;
         }
       }
-  
+/* aca modificamos el contenedor titulos generales de la seccion servicios */ 
       .tramites-generales {
         margin-top: 20px;
   
         ul {
+/* aca modificamos las listas desordenadas de la seccion servicios */
           list-style: circle;
           padding-left: 20px;
   
           li {
+/* aca modificamos los li de la seccion servicios */
             margin-bottom: 10px;
             font-size: 16px;
             line-height: 1.4;

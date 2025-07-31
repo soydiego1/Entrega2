@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* aca hacemos un reset a los estilos predefinidos*/
 @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*// variables usadas de boostrap
@@ -23,6 +24,7 @@ body {
   color: var(--bs-success);
 }
 
+/* aca definimos variables de boostrap*/
 :root {
   color: var(--bs-secondary-color);
   color: var(--bs-warning);
@@ -30,12 +32,14 @@ body {
   color: var(--bs-success);
 }
 
+/* aca aplicamos la mediaquery para desktop */
 @media screen and (min-width: 1024px) {
   header,
   #navbar-nav-dropdown {
     background-color: #d7e0dd;
   }
   main section .contenedor-servicios {
+    /* aca aplicamos a las cajas del contenedor servicios del index */
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -55,6 +59,7 @@ body {
     border-radius: 10px;
   }
   main .enlaces {
+    /* aca aplicamos al div del index */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -63,32 +68,32 @@ body {
     margin: 40px;
   }
   main #imagen-trabajando {
+    /* imagen destacada de la seccion sobre nosotros */
     width: 100%;
     height: 400px;
   }
   main #imagen-analizando {
+    /* aca modificamos la imagen principal de la seccion propuesta y plan de trabajo */
     width: 100%;
     height: 400px;
     margin-top: 0;
   }
   main #imagen-escribiendo {
+    /* aca modificamos la imagen superior de la seccion contacto*/
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
   main #imagen-edificio {
     width: 100%;
-    height: 500px;
-  }
-  main .imagen-hombre {
-    height: 500px;
-    padding-top: 60px;
+    height: 400px;
   }
   main .imagen-hombre img {
-    display: block;
+    /* Imagen lateral (hombre dando la mano) de la seccion contacto*/
     height: 500px;
     padding-top: 60px;
   }
   main .imagenes-grid {
+    /* aca modificamos la grilla de imagenes de la seccion servicios */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "images5 images3 images3" "images1 images2 images2";
@@ -117,6 +122,7 @@ body {
     max-height: 150px;
   }
   main .imagenes-grid .propuesta {
+    /* aca modificamos la clase de la seccion propuesta y plan de trabajo */
     display: grid;
     grid-template-rows: repeat(5, 35px);
   }
@@ -146,38 +152,53 @@ body {
     height: 300px;
   }
   main .footer .logo {
+    /* aca modificamos el logo de la empresa */
     height: 90px;
   }
   main .footer .contenedor {
+    /* aca modificamos el contenedor principal del footer */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
   }
-  main .footer .contenedor .contacto,
-  main .footer .contenedor .suscribete,
-  main .footer .contenedor .imagenes-pie-pagina {
+  main .footer .contenedor .contacto {
+    font-size: 18px;
+    display: inline-block;
+  }
+  main .footer .contenedor .contacto .nombres {
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  main .footer .contenedor .contacto .nombres .suscribete {
+    /* aca modificamos el div suscribete del footer*/
+    font-size: 18px;
+  }
+  main .footer .contenedor .contacto .nombres .suscribete .suscripcion {
+    /* aca modificamos el parrafo del div suscribete del footer */
+    font-size: 14px;
+  }
+  main .footer .contenedor .contacto .nombres .imagenes-pie-pagina {
+    /* aca modificamos las imagenes de las redes sociales del footer */
     display: block;
   }
-  main .footer .contenedor .nombres {
-    margin-top: 20px;
-    font-size: 15px;
-  }
-  main .footer .contenedor .suscripcion {
-    font-size: 15px;
-  }
-  main .footer .contenedor .derechos-reservados {
-    margin-top: 10px;
-  }
 }
+/* FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre)*/
+.derechos-reservados {
+  margin-top: 10px;
+}
+
+/* aca aplicamos la mediaquery para tablet */
 @media screen and (min-width: 768px) {
   main section .seccion-contacto {
     padding: 40px 20px;
   }
-  main section .seccion-contacto informacion-contacto {
+  main section .seccion-contacto .informacion-contacto {
     gap: 20px;
   }
   main section .contenedor-servicios {
+    /* aca aplicamos a las cajas del contenedor servicios del index */
     display: flex;
   }
   main section .contenedor-servicios .caja1,
@@ -194,6 +215,7 @@ body {
     border-radius: 10px;
   }
   main .enlaces {
+    /* aca aplicamos al div del index */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -203,17 +225,15 @@ body {
   }
   main #imagen-trabajando,
   main #imagen-analizando {
+    /* aca modificamos las imagenes de la seccion propuesta y plan de trabajo */
     width: 100%;
-  }
-  main #imagen-trabajando {
-    height: 500px;
+    height: 400px;
   }
   main #imagen-analizando {
-    height: 400px;
     margin-top: 0;
   }
   main .imagen-hombre img {
-    display: block !important;
+    /* Imagen lateral (hombre dando la mano) de la seccion contacto*/
     max-width: 100%;
     height: auto;
     padding-top: 20px;
@@ -235,6 +255,7 @@ body {
     margin-top: 40px;
   }
   .imagenes-grid {
+    /* aca modificamos la grilla de imagenes de la seccion servicios */
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: auto;
@@ -264,36 +285,40 @@ body {
   .imagenes-grid .images6 {
     max-height: 150px;
   }
-  footer .contenedor {
+  .footer .contenedor {
+    /* aca modificamos el contenedor principal del footer */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr;
     gap: 10px;
   }
-  footer .suscribete {
-    font-size: 18px;
-    padding-right: 40px;
-  }
-  footer .contacto {
+  .footer .contenedor .contacto {
     font-size: 18px;
     display: inline-block;
-    padding-left: 40px;
   }
-  footer .contacto .nombres {
+  .footer .contenedor .contacto .nombres {
     font-size: 15px;
     display: inline-block;
   }
-  footer .suscripcion {
+  .footer .contenedor .contacto .nombres .suscribete {
+    /* aca modificamos el div suscribete del footer*/
+    font-size: 18px;
+  }
+  .footer .contenedor .contacto .nombres .suscribete .suscripcion {
+    /* aca modificamos el parrafo del div suscribete del footer */
     font-size: 14px;
   }
-  footer .imagenes-pie-pagina {
+  .footer .contenedor .contacto .nombres .imagenes-pie-pagina {
+    /* aca modificamos las imagenes de las redes sociales del footer */
     display: block;
   }
 }
+/* FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre)*/
 .derechos-reservados {
   margin-top: 0px;
 }
 
+/* aca aplicacmos al header de toda la pagina*/
 header {
   background-color: #d7e0dd;
   display: flex;
@@ -303,6 +328,7 @@ header {
   width: 100%;
 }
 header .logo {
+  /* aca modificamos el logo de la empresa */
   height: 90px;
   display: block;
 }
@@ -329,10 +355,12 @@ section {
   margin-top: 3%;
 }
 section #primer-titulo {
+  /* aca aplicamos al titulo servicios del index */
   display: flex;
   justify-content: center;
 }
 section .contenedor-servicios {
+  /* aca aplicamos a las cajas del contenedor servicios del index */
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -343,7 +371,7 @@ section .contenedor-servicios .caja1,
 section .contenedor-servicios .caja2,
 section .contenedor-servicios .caja3,
 section .contenedor-servicios .caja4 {
-  width: 100%;
+  width: 100%; /* ocupa todo el ancho en mobile*/
   display: inline-block;
   width: 300px; /* Ancho de la caja */
   height: 150px; /* Alto de la caja */
@@ -359,6 +387,7 @@ section .contenedor-servicios .caja4 {
 }
 
 .enlaces {
+  /* aca aplicamos al div del index */
   display: grid;
   justify-items: center;
   margin: 40px;
@@ -368,17 +397,21 @@ section .contenedor-servicios .caja4 {
   gap: 25px;
 }
 .enlaces .imagen-enlaces {
+  /* aca modificamos las imagenes de los enlaces */
   width: 200px;
 }
 
+/* aca modificamos el footer */
 .footer {
   background-color: #d7e0dd;
 }
 .footer .logo {
+  /* aca modificamos el logo de la empresa */
   display: block;
   height: 90px;
 }
 .footer .contenedor {
+  /* aca modificamos el contenedor principal del footer */
   margin-top: 10px;
   padding-left: 10px;
   display: grid;
@@ -401,16 +434,20 @@ section .contenedor-servicios .caja4 {
   display: inline-block;
 }
 .footer .contenedor .suscribete {
+  /* aca modificamos el div suscribete del footer*/
   font-size: 18px;
   display: inline-block;
 }
 .footer .contenedor .suscribete .suscripcion {
+  /* aca modificamos el parrafo del div suscribete del footer */
   font-size: 14px;
   margin-top: 30px;
 }
 .footer .contenedor .suscribete form.input {
+  /* aca modificamos el formulario del div suscribete del footer */
   display: flex;
   margin-top: 10px;
+  /* aca modificamos el boton del div suscribete del footer */
 }
 .footer .contenedor .suscribete form.input input[type=text],
 .footer .contenedor .suscribete form.input input[type=email] {
@@ -431,6 +468,7 @@ section .contenedor-servicios .caja4 {
   margin-top: 0px;
 }
 .footer .contenedor .imagenes-pie-pagina {
+  /* aca modificamos las imagenes de las redes sociales del footer */
   align-items: center;
   justify-content: center;
   margin: 100px 100px;
@@ -446,6 +484,7 @@ section .contenedor-servicios .caja4 {
   height: 40px;
 }
 .footer .derechos-reservados {
+  /* aca modificamos el ultimo parrafo del footer */
   display: flex;
   justify-content: center;
   font-family: Poppins, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -453,6 +492,7 @@ section .contenedor-servicios .caja4 {
 }
 
 main #imagen-escribiendo {
+  /* aca modificamos la imagen superior de la seccion contacto*/
   width: 100%;
   height: 300px;
   display: block;
@@ -476,43 +516,42 @@ main section .seccion-contacto .informacion-contacto #contactenos {
   margin-bottom: 30px;
   color: #29bd99;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 h2 {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 h2 {
   font-size: 22px;
   margin-bottom: 10px;
   color: black;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 p {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 p {
   font-size: 16px;
   margin-bottom: 5px;
   color: #e1ebe7;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario {
-  margin-top: 20px;
-}
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form {
+  /* aca aplicamos propiedades al formulario*/
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form label {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form label {
   font-weight: bold;
   font-size: 14px;
   color: #e1ebe7;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=text],
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form input[type=email],
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form input[type=text],
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form input[type=email],
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form textarea {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form textarea {
   resize: vertical;
   min-height: 100px;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form .boton {
+  /* aca aplicamos propiedades al boton */
   display: inline-block;
   width: fit-content;
   background-color: #007bff;
@@ -525,25 +564,25 @@ main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form 
   cursor: pointer;
   transition: background-color 0.3s;
 }
-main section .seccion-contacto .informacion-contacto .col-sm-6 .formulario form .boton:hover {
+main section .seccion-contacto .informacion-contacto .col-12 .col-md-6 .formulario form .boton:hover {
   background-color: #007bff;
 }
-main section .seccion-contacto .informacion-contacto .imagen-hombre {
+main section .seccion-contacto .informacion-contacto .imagen-hombre img {
+  /* Imagen lateral (hombre dando la mano) de la seccion contacto*/
   display: flex;
   align-items: center;
   justify-content: center;
-}
-main section .seccion-contacto .informacion-contacto .imagen-hombre img {
-  display: none !important;
 }
 main .footer .contenedor .nombres .suscribete .imagenes-pie-pagina {
   margin-bottom: 0px;
 }
 main .footer .derechos-reservados {
+  /*  FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre) */
   margin-top: 10px;
 }
 
 main #titulo-info {
+  /* aca modificamos el titulo principal de la seccion infotips */
   text-align: center;
   font-size: 32px;
   font-weight: bold;
@@ -551,6 +590,7 @@ main #titulo-info {
   color: #29bd99;
 }
 main .videos {
+  /* aca modificamos los videos de la seccion infotips */
   padding: 0 15px;
 }
 main .videos .row {
@@ -569,6 +609,7 @@ main .videos .row .col-md-6.col-lg-4 video {
 }
 
 main #imagen-analizando {
+  /* aca modificamos la imagen principal de la seccion propuesta y plan de trabajo */
   width: 100%;
   height: 300px;
   display: block;
@@ -581,6 +622,7 @@ main section {
   margin: 0 auto;
 }
 main section #titulo-propuesta {
+  /* aca modificamos el titulo principal de la seccion propuesta y plan de trabajo */
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -588,30 +630,35 @@ main section #titulo-propuesta {
   color: #29bd99;
 }
 main section #titulo-trabajo {
+  /* aca modificamos el subtitulo principal de la seccion propuesta y plan de trabajo */
   font-size: 28px;
   font-weight: bold;
   margin: 30px 0 20px;
   color: #29bd99;
 }
 main section .propuesta p {
+  /* aca modificamos los parrafos de la seccion propuesta y plan de trabajo */
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
   color: black;
 }
 main section #titulo-plan {
+  /* aca modificamos el subtitulo de la seccion propuesta y plan de trabajo */
   font-size: 28px;
   font-weight: bold;
   margin: 40px 0 20px;
   color: #29bd99;
 }
 main section .plan-de-trabajo .etapa {
+  /* aca modificamos las clases de la seccion propuesta y plan de trabajo */
   font-size: 20px;
   font-weight: bold;
   margin-top: 25px;
   color: black;
 }
 main section .plan-de-trabajo p {
+  /* aca modificamos el parrafo de las clases de la seccion propuesta y plan de trabajo */
   font-size: 17px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -619,6 +666,7 @@ main section .plan-de-trabajo p {
 }
 
 main .imagenes-grid {
+  /* aca modificamos la grilla de imagenes de la seccion servicios */
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   grid-template-rows: auto;
@@ -657,11 +705,14 @@ main .imagenes-grid img {
   object-fit: cover;
 }
 main .contenido-completo {
+  /* aca modificamos Contenido principal de la seccion servicios */
   padding: 0 20px;
   max-width: 1000px;
   margin: 0 auto;
+  /* aca modificamos el contenedor titulos generales de la seccion servicios */
 }
 main .contenido-completo #servicios {
+  /* aca modificamos el titulo nuestros servicios de la seccion servicios */
   text-align: center;
   font-size: 36px;
   margin-bottom: 40px;
@@ -669,21 +720,25 @@ main .contenido-completo #servicios {
 }
 main .contenido-completo .titulos-servicios,
 main .contenido-completo .titulos-tramites {
+  /* aca modificamos ambos titulos de la seccion servicios */
   font-size: 24px;
   font-weight: bold;
   margin-top: 30px;
   color: #29bd99;
 }
 main .contenido-completo p {
+  /* aca modificamos el Contenido del contenedor de la seccion servicios */
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 25px;
   color: black;
 }
 main .contenido-completo .lista-servicio {
+  /* aca modificamos las listas desordenadas de la seccion servicios */
   list-style: disc;
   padding-left: 20px;
   margin-top: 15px;
+  /* aca modificamos los li de la seccion servicios */
 }
 main .contenido-completo .lista-servicio li {
   margin-bottom: 10px;
@@ -694,22 +749,26 @@ main .contenido-completo .tramites-generales {
   margin-top: 20px;
 }
 main .contenido-completo .tramites-generales ul {
+  /* aca modificamos las listas desordenadas de la seccion servicios */
   list-style: circle;
   padding-left: 20px;
 }
 main .contenido-completo .tramites-generales ul li {
+  /* aca modificamos los li de la seccion servicios */
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.4;
 }
 
 main #imagen-trabajando {
+  /* imagen destacada de la seccion sobre nosotros */
   width: 100%;
   height: 300px;
   display: block;
   margin: 0 auto 20px;
 }
 main .titulo-sobre-nosotros {
+  /* Título principal y subtítulos */
   text-align: center;
   font-size: 32px;
   font-weight: bold;

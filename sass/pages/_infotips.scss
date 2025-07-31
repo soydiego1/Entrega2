@@ -1,16 +1,15 @@
 @use "../utilidades/variables" as *;
 main {
-    // Título principal
     #titulo-info {
+/* aca modificamos el titulo principal de la seccion infotips */
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       margin: 40px 0 30px;
       color: $color-principal;
     }
-  
-    // Sección de videos
     .videos {
+/* aca modificamos los videos de la seccion infotips */
       padding: 0 15px;
   
       .row {

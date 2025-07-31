@@ -1,16 +1,17 @@
 @use "../utilidades/variables" as*;
 @use "../utilidades/mixin" as*;
-
+/* aca aplicamos la mediaquery para tablet */
 @media screen and (min-width: 768px) {
   main {
     section{
       .seccion-contacto{
         padding: 40px 20px;
-        informacion-contacto{
+        .informacion-contacto{
           gap: 20px; 
         }
       }
     .contenedor-servicios {
+/* aca aplicamos a las cajas del contenedor servicios del index */
       display: flex;
       .caja1,
       .caja2,
@@ -21,6 +22,7 @@
   }
 }
     .enlaces {
+/* aca aplicamos al div del index */
       @include grid(grid, repeat(3, 1fr), repeat(2, 1fr), 25px);
       justify-items: center;
       margin: 40px;
@@ -28,21 +30,17 @@
 
     #imagen-trabajando,
     #imagen-analizando {
+/* aca modificamos las imagenes de la seccion propuesta y plan de trabajo */
       width: 100%;
-    }
-
-    #imagen-trabajando {
-      height: 500px;
-    }
-
-    #imagen-analizando {
       height: 400px;
+    }
+    #imagen-analizando {
       margin-top: 0;
     }
 
     .imagen-hombre {
       img {
-        display:block !important;
+/* Imagen lateral (hombre dando la mano) de la seccion contacto*/
         max-width: 100%;
         height: auto;
         padding-top: 20px;
@@ -74,6 +72,7 @@
     }
   }
   .imagenes-grid {
+/* aca modificamos la grilla de imagenes de la seccion servicios */
     @include grid(grid, repeat(3, 2fr), auto, 10px);
       grid-template-areas:
       "images5 images3 images3"
@@ -99,42 +98,34 @@
       
     }
   }
-  footer {
+  .footer {
     .contenedor {
-      @include grid(grid, 1fr 1fr 1fr,1fr,10px);
-      
-    }
-
-    .suscribete {
-      font-size: 18px;
-      padding-right: 40px;
-      
-    }
-
-    .contacto {
-      font-size: 18px;
-      display: inline-block;
-      padding-left: 40px;
-
-      .nombres {
-        font-size: 15px;
+/* aca modificamos el contenedor principal del footer */
+      @include grid(grid, 1fr 1fr 1fr,2fr,10px);
+      .contacto {
+        font-size: 18px;
         display: inline-block;
-        
-      }
-    }
-
-    .suscripcion {
-      font-size: 14px;
-    }
-
-    .imagenes-pie-pagina {
-      display: block;
-    }
+        .nombres {
+          font-size: 15px;
+          display: inline-block;
+          .suscribete {
+/* aca modificamos el div suscribete del footer*/
+            font-size: 18px;    
+            .suscripcion {
+/* aca modificamos el parrafo del div suscribete del footer */
+              font-size: 14px;
   }
+  }        
+              .imagenes-pie-pagina {
+/* aca modificamos las imagenes de las redes sociales del footer */
+                display: block;      
+    }     
+    } 
+    }
 }
-
-
-// FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre)
+}
+}
+/* FOOTER: TEXTO FINAL (fuera de media query para que aplique siempre)*/
 .derechos-reservados {
   margin-top: 0px;
 }
